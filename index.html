@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mirror Of My Mind</title>
+  <style>
+    *{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+  }
+
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow:hidden;
+
+    }
+    main {
+  flex-grow: 1;
+  padding: 20px;
+ 
+}
+
+   header {
+      background-color: #111;
+      padding:1rem;
+      color:white;
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+      
+     /* position: relative;
+      z-index: 10;*/
+   }
+    
+   /*.con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+   }
+   .con h2{
+    margin:0;
+    color:#00d4ff;
+    flex:1;
+    text-align: center;
+   }*/
+   .menu-taggle{
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position:relative;
+      margin-left:90%;
+      margin-top: -20px;
+    
+    }
+    .menu-taggle span{
+      background: white;
+      height:3px;
+      margin:4px 0;
+      width:25px;
+  
+    }
+     
+    nav{
+      display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  
+    }
+    nav a {
+      color: white;
+      font-size: larger;
+      text-decoration: none;
+    
+      padding:0.5rem 1rem;
+      border-radius: 5px;
+      
+    }
+  
+    #menu-checkbox{
+      display: none;
+    }
+    @media(max-width:600px){
+      header{
+        flex-direction: column;
+
+      justify-content: center;
+        align-items: center;
+      }
+      header h2{
+        text-align:center;
+        width:100%;
+       
+        margin-bottom: 0;
+      }
+    }
+
+@media(max-width:600px){
+  .menu-taggle{
+    display: flex;}
+    nav{
+      display:none;
+flex-direction: column;
+text-align: center;
+position:static;
+top:60px;
+right: 0;
+width:100%;
+
+    }
+  
+  
+#menu-checkbox:checked ~ nav{
+  display: flex;
+}
+nav a{
+  display:block;
+  width:100%;
+  padding:1rem;
+
+}}
+
+    nav a:hover {
+      background-color: #00d4ff;
+      color: black;
+    }
+
+    
+    .main-content {
+      position:relative;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+     
+      padding: 2rem;
+      height: auto;
+    justify-items:center;
+      width:90%;
+    
+      margin: 0px auto;
+  
+     
+     
+    }
+
+    .intro {
+      margin-top: 30px;
+     padding:10px;
+      animation: slideIn 1s ease-out forwards;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .profile-pic {
+    
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(208, 226, 229, 0.5);
+      animation: fadeIn 2s ease-in;
+     
+      margin-top: 50px;
+      position: relative;
+      z-index: 2000;
+     
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+
+    }
+    
+footer {
+  display: flex;
+ font-size: 1rem;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color:rgb(230, 230, 138);
+  color:rgb(36, 32, 32);
+  margin-top: auto;
+ 
+}
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+   
+    <h2>Monira Lotfy</h2>
+<label class="menu-taggle" for="menu-checkbox" >
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+
+<input type="checkbox" id="menu-checkbox"/>
+  <nav>
+    
+    <a href="#experience">Home</a>
+    <a href="#education">About</a>
+    <a href="#Skills">Skills</a>
+    <a href="#projs">Education</a>
+    <a href="#projts">Experiences</a>
+    <a href="#prects">Certificate</a>
+    <a href="#cact">Contact</a>
+  </nav>  </header>
+
+  <div class="main-content">
+    
+    <div class="profile-pic">
+      <img src="img1.jpg" alt="عکس من">
+    </div>
+    <div class="intro">
+      <h1>سلام! من [نام شما]</h1>
+    
+      <p>یک توسعه‌دهنده وب با اشتیاق به طراحی زیبا و عملکرد بالا هستم. در این پورتفولیو با کارها و تجربیات من آشنا شوید.</p>
+        <p>یک توسعه‌دهنده وب با اشتیاق به طراحی زیبا و عملکرد بالا هستم. در این پورتفولیو با کارها و تجربیات من آشنا شوید.</p>
+        <p>یک توسعه‌دهنده وب با اشتیاق به طراحی زیبا و عملکرد بالا هستم. در این پورتفولیو با کارها و تجربیات من آشنا شوید.</p>
+    </div>
+  </div>
+  <footer>
+   
+    <p>Prepared by Monira Lotfy</p>
+  </footer>
+</body>
+</html>
